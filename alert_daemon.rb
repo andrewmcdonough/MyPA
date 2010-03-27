@@ -3,6 +3,6 @@
 
 while (true) do
   puts "Running send alerts"
-  `rake alerts:send_all`
+  `rake alerts:send_pending`
   sleep 60
 end
