@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
 
   before_save :default_end_date
 
+  named_scope :with_pending_alerts, :conditions => ["", ]
 
   def default_end_date
     self.end_at = start_at + 1.hour
