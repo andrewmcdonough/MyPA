@@ -6,9 +6,9 @@ body {
 }
 
 #page {
-  width: 970px;
+/*  width: 970px;*/
   padding: 10px; 
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
 h1 {
@@ -22,4 +22,8 @@ form { overflow: inherit;}
 label {
   display: block;
   margin: 10px 0 5px 0;
+}
+
+p + p {
+  text-indent: 0;
 }
