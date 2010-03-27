@@ -19,6 +19,9 @@ class UsersController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset session
       self.current_user = @user # !! now logged in
+      @user.mobile = params[:user][:mobile]
+      @user.first_name = params[:user][:first_name]
+      @user.last_name = params[:user][:last_name]
       redirect_back_or_default('/')
       flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
     else
