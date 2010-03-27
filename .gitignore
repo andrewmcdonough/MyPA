@@ -6,3 +6,4 @@
 /config/database.yml
 /config/database.yml.example
 /tmp/**/*
+/db/schema.rb
