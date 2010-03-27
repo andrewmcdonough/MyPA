@@ -1,0 +1,6 @@
+doc/*
+website/*
+pkg/*
+.specification
+pkg
+rdoc
