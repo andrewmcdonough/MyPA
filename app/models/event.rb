@@ -44,7 +44,7 @@ class Event < ActiveRecord::Base
   end
 
   def message
-    "The event #{short_name} is happening #{nice_day} at #{nice_time}"
+    "Hi, the event #{short_name} is happening #{nice_day} at #{nice_time}. Greetings, #{APPLICATION_NAME}"
   end
 
 end

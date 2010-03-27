@@ -6,9 +6,10 @@ body {
 }
 
 #page {
-/*  width: 970px;*/
+  width: 940px;
   padding: 10px; 
   margin: 0 auto !important;
+  background: white;
 }
 
 h1,
@@ -30,4 +31,16 @@ label {
 
 p + p {
   text-indent: 0;
+}
+
+select {
+  display: inline;
+}
+
+#footer {
+  margin: 0 auto;
+  background: url('/images/footer_background.gif');
+  height: 285px;
+  width: 940px;
+  padding: 0 10px;
 }

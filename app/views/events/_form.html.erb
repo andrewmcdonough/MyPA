@@ -4,8 +4,10 @@
 </p>
 <p>
   <%= f.label :start_at %><br />
-  <%= f.datetime_select :start_at %>
+  <%= f.datetime_select :start_at, :class => 'date-picker' %>
 </p>
 <p>
   <%= f.submit 'Create' %>
 </p>
+
+<%= link_to 'Show all appointments', events_path %>

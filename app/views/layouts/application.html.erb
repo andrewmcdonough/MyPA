@@ -7,9 +7,13 @@
   <title>MyPA</title>
   <%= javascript_include_tag(
     'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js',
+    'jquery-ui-1.8.custom.min',
     'application'
   )%>
-  <%= stylesheet_link_tag 'baseline.0.5.1/css/compressed/baseline.compress.css', 'mypa' %>
+  <%= stylesheet_link_tag(
+    'baseline.0.5.1/css/compressed/baseline.compress.css',
+    'jquery-ui-1.8.custom.css',
+    'mypa' )%>
 </head>
 
 <body>
@@ -18,5 +22,9 @@
     <%= render '/shared/header' %>
     <%= yield :layout %>
   </div>
+  
+  <div id="footer">
+  </div>
+  
 </body>
 </html>
