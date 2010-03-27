@@ -1,4 +1,5 @@
 class CalendarController < ApplicationController
+  before_filter :only_if_logged_in
   
   def index
     @month = params[:month].to_i

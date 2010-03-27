@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  def only_if_logged_in
+    redirect_to login_path if current_user.nil?
+  end
 end
