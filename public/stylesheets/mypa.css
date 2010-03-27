@@ -1,13 +1,23 @@
 body {
+  font-family: 'Helvetica';
   padding: 20px 0 0 0;
+  background: #005DAA;
+  color: #FBFBFB;
 }
 
 #page {
-  margin: 0 auto !important;
+  width: 970px;
+  padding: 10px;
+  margin: 0 auto;
 }
 
-/* Baseline.css quick fixes, I know it's ugly... */
+h1 {
+  color: #77D54C;
+}
 
-form {
-  overflow: inherit !important;
+/* Forms */
+
+label {
+  display: block;
+  margin: 10px 0 5px 0;
 }
