@@ -20,6 +20,7 @@
   
   <div id="page" class="width4">
     <%= render '/shared/header' %>
+    <%= flash[:notice] || flash[:message] || flash[:error] %>
     <%= yield :layout %>
   </div>
   
