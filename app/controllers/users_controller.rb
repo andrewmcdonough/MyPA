@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   # render new.rhtml
   def new
+    redirect_to root_url if current_user
     @user = User.new
   end
  
