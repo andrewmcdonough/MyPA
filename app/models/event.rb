@@ -5,7 +5,8 @@ class Event < ActiveRecord::Base
   before_save :set_defaults
   belongs_to :user 
 
-  named_scope :with_pending_alerts, :conditions => ["start_at < ? AND ISNULL(sent) ", Time.now - 1.day]
+  # named_scope :with_pending_alerts, :conditions => ["start_at < ? AND ISNULL(sent) ", Time.now - 1.day]
+  named_scope :with_pending_alerts, :conditions => ["ISNULL(sent)"]
 
   def default_end_date
     self.end_at = start_at + 1.hour
@@ -17,16 +18,14 @@ class Event < ActiveRecord::Base
   end
 
   def send_alert
-    puts "send alert"
     mobile_to = self.user.mobile
+    puts "Sending alert to #{mobile_to}"
     api = Clickatell::API.authenticate('3228297', 'andrewmcdonough', 'Myp1q2w')
-    mark_as_sent if api.send_message(mobile_to, self.message)
+    mark_as_sent if true #api.send_message(mobile_to, self.message)
   end
 
   def mark_as_sent
-    puts  "marking"
-    self.sent = Time.now
-    self.save
+    update_attribute(sent, Time.now)
   end
 
   def short_name
