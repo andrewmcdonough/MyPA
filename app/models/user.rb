@@ -123,3 +123,26 @@ class User < ActiveRecord::Base
       self.deleted_at = self.activation_code = nil
     end
 end
+
+# == Schema Information
+#
+# Table name: users
+#
+#  id                        :integer(4)      not null, primary key
+#  login                     :string(255)
+#  email                     :string(255)
+#  first_name                :string(255)
+#  last_name                 :string(255)
+#  mobile                    :string(255)
+#  crypted_password          :string(40)
+#  salt                      :string(40)
+#  created_at                :datetime
+#  updated_at                :datetime
+#  remember_token            :string(255)
+#  remember_token_expires_at :datetime
+#  activation_code           :string(40)
+#  activated_at              :datetime
+#  state                     :string(255)     default("passive")
+#  deleted_at                :datetime
+#
+
