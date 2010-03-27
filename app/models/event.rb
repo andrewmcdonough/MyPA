@@ -19,13 +19,14 @@ class Event < ActiveRecord::Base
 
   def send_alert
     mobile_to = self.user.mobile
-    puts "Sending alert to #{mobile_to}"
+    STDOUT.puts "Sending alert to #{mobile_to} at #{Time.now.strftime('%H:%M, %d/%m/%Y')}"
     api = Clickatell::API.authenticate('3228297', 'andrewmcdonough', 'Myp1q2w')
-    mark_as_sent if true #api.send_message(mobile_to, self.message)
+    return (mark_as_sent && api.send_message(mobile_to, self.message))
   end
 
   def mark_as_sent
-    update_attribute(sent, Time.now)
+    self.sent = Time.now
+    return self.save
   end
 
   def short_name

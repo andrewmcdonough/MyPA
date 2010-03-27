@@ -1,8 +1,8 @@
 #/usr/bin/ruby
 #
 
+puts "Notification daemon started."
 while (true) do
-  puts "Running send alerts"
-  `rake alerts:send_pending`
+  `rake alerts:send_pending --trace`
   sleep 60
 end
