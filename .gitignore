@@ -1,0 +1,8 @@
+.DS_Store
+*~
+*.swp
+*.log
+/log/*
+/config/database.yml
+/config/database.yml.example
+/tmp/**/*
