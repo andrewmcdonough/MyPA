@@ -9,9 +9,12 @@
     'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js',
     'application'
   )%>
+  <%= stylesheet_link_tag 'baseline.0.5.1/css/compressed/baseline.compress.css', 'mypa' %>
 </head>
 
 <body>
+  <div id="page" class="width4">
   <%= yield :layout %>
+  </div>
 </body>
 </html>
