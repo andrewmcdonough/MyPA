@@ -1,5 +1,6 @@
 <div id="header">
   <% if current_user %>
+  Hi, <%=h current_user.name %>,
     <%= link_to 'Logout', logout_path %>
   <% else %>
     <%= link_to 'Login', login_path %> OR  <%= link_to 'Sign up!', signup_path %>
