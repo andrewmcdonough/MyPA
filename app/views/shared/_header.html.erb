@@ -1,0 +1,9 @@
+<h1>MyPA</h1>
+
+<div id="header">
+  <% if current_user %>
+    <%= link_to 'Logout', logout_path %>
+  <% else %>
+    <%= link_to 'Login', login_path %> OR  <%= link_to 'Sign up!', signup_path %>
+  <% end %>
+</div>

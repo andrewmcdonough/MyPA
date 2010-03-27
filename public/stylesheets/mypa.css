@@ -1,21 +1,23 @@
 body {
-  font-family: 'Helvetica';
+/*  font-family: 'Helvetica';*/
   padding: 20px 0 0 0;
-  background: #005DAA;
-  color: #FBFBFB;
+  background: #41BBFF;
+  color: #2B2B2B;
 }
 
 #page {
   width: 970px;
-  padding: 10px;
+  padding: 10px; 
   margin: 0 auto;
 }
 
 h1 {
-  color: #77D54C;
+/*  color: #77D54C;*/
 }
 
 /* Forms */
+
+form { overflow: inherit;}
 
 label {
   display: block;
