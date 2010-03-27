@@ -10,10 +10,10 @@ class Event < ActiveRecord::Base
   def default_end_date
     self.end_at = start_at + 1.hour
   end
-
   
   def set_defaults
     default_end_date
+    # self.user = current_user
   end
 
   def send_alert
