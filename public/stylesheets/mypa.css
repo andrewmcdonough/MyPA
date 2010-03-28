@@ -64,3 +64,10 @@ select {
   width: 940px;
 }
 
+#logo {
+  position: absolute;
+  left: 66px;
+  display: block;
+  width: 180px;
+  height: 145px;
+}

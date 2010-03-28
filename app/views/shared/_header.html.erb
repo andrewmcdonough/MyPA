@@ -1,6 +1,7 @@
 <div id="header">
   
   <div class="container">
+    <%= link_to '', root_path, :id => 'logo' %>
     <div id="login_controls">
       <% if current_user %>
       <%= link_to 'Logout', logout_path %>
