@@ -63,7 +63,7 @@ select {
 #header .container #login_controls {
   position: absolute;
   right: 30px;
-  bottom: 10px;
+  top: 100px;
   text-align: right;
 }
 
