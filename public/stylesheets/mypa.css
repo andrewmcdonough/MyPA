@@ -5,6 +5,16 @@ body {
   color: #2B2B2B;
 }
 
+a:link,
+a:visited {
+  color: #00A6E7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #page {
   width: 880px;
   padding: 30px; 
@@ -12,14 +22,14 @@ body {
   background: white;
 }
 
-h1,
+/*h1,
 h2,
 h3,
 h4,
 h5 {
   color: #fff
 }
-
+*/
 /* Forms */
 
 form { overflow: inherit;}
@@ -70,4 +80,72 @@ select {
   display: block;
   width: 180px;
   height: 145px;
+}
+
+#whats_nudge {
+  background: url('/images/whats_nudge_bg.gif') no-repeat;
+  float: left;
+  width: 420px;
+  height: 300px;
+}
+
+#login_signup {
+  background: url('/images/login_signup_bg.gif') no-repeat;
+  float: right;
+  width: 303px;
+  height: 208px;
+}
+
+#whats_nudge,
+#login_signup {
+  padding: 20px;
+}
+
+#whats_nudge h3,
+#login_signup h3 {
+  margin: 0 0 20px;
+}
+
+#login_signup p {
+  padding: 0 0 10px;
+}
+
+#login_signup label {
+  float: left;
+  margin: 0;
+  width: 80px;
+}
+
+#login_signup input[type='text'],
+#login_signup input[type='password'] {
+  width: 210px;
+  float: right;
+}
+
+#login_signup input[type='submit'] {
+  width: 110px;
+  height: 40px;
+  background: url('/images/submit_button.gif');
+  border: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  float: right;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
 }
