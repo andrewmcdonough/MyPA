@@ -139,7 +139,7 @@ module EventCalendar
     end
     
     def color
-      self[:color] || '#9aa4ad'
+      self[:color] || '#41BBFF'
     end
   
     def days

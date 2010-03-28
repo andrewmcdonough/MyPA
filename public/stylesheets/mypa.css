@@ -193,3 +193,9 @@ ul#main_menu li.active {
 ul#main_menu li.active a {
   color: black;
 }
+
+.ec-event-bg a {
+  padding-bottom: 3px;
+  background: #41BBFF;
+  font-size: 0.85em;
+}
