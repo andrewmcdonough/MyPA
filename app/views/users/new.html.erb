@@ -1,27 +1,27 @@
-<h1>Sign up as a new user</h1>
+<h1>Sign up to <%= APPLICATION_NAME.humanize %></h1>
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
 <% form_for :user, :url => users_path do |f| -%>
-<p><%= label_tag 'login' %><br/>
+<p><%= f.label :user, :login %>
 <%= f.text_field :login %></p>
 
-<p><%= label_tag 'first_name' %><br/>
+<p><%= f.label :user, 'first_name' %>
 <%= f.text_field :first_name %></p>
 
-<p><%= label_tag 'last_name' %><br/>
+<p><%= f.label :user, 'last_name' %>
 <%= f.text_field :last_name %></p>
 
-<p><%= label_tag 'mobile' %><br/>
+<p><%= f.label :user, 'mobile' %>
 <%= f.text_field :mobile %></p>
 
-<p><%= label_tag 'email' %><br/>
+<p><%= f.label :user, 'email' %>
 <%= f.text_field :email %></p>
 
-<p><%= label_tag 'password' %><br/>
+<p><%= f.label :user, 'password' %>
 <%= f.password_field :password %></p>
 
-<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+<p><%= f.label :user, :password_confirmation %>
 <%= f.password_field :password_confirmation %></p>
 
 <p><%= submit_tag 'Sign up' %></p>

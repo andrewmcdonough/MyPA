@@ -1,10 +1,7 @@
-<p>
-  <b>Name:</b>
-  <%=h @event.name %>
-</p>
+<h2><%=h @event.name %></h2>
 
 <p>
-  <b>Start at:</b>
+  <b>Starts at:</b>
   <%=h @event.start_at %>
 </p>
 
@@ -13,6 +10,10 @@
   <%=h @event.end_at %>
 </p>
 
+<h3>Notes</h3>
+<p>To be added later.</p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<hr />
+
+<%= link_to 'Edit your appointment', edit_event_path(@event) %> |
+<%= link_to 'Back to calendar', calendar_path %>
