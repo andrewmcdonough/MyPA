@@ -19,6 +19,12 @@
 <body>
   <%= render '/shared/header' %>
   <div id="page" class="width4">
+    <ul id="main_menu">
+      <% content_tag :li, :class => contextual_link_class('calendar') do %><%= link_to 'my calendar', calendar_path(:year => Time.now.year, :month => Time.now.month) %><% end %>
+      <li>my profile</li>
+      <li>information</li>
+      <li>contact</li>
+    </ul>
     
     <%= flash[:notice] || flash[:message] || flash[:error] %>
     <%= yield :layout %>

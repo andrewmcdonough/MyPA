@@ -17,8 +17,8 @@ a:hover {
 
 #page {
   width: 880px;
-  padding: 30px; 
-  margin: 0 auto !important;
+  padding: 20px 30px 30px 30px;
+  margin: 20px auto 0 auto !important;
   background: white;
 }
 
@@ -148,4 +148,48 @@ html[xmlns] .clearfix {
 }
 * html .clearfix {
   height: 1%;
+}
+
+ul#main_menu {
+  height: 36px;
+  list-style-type: none;
+  margin: 0 0 0 278px;
+  position: absolute;
+  top: -36px;
+}
+
+ul#main_menu li,
+ul#main_menu a {
+  width: 147px;
+  height: 26px;
+  text-align: center;
+  font-weight: bold;
+}
+
+ul#main_menu li {
+  float: left;
+  padding-top: 10px;
+  margin-right: 5px;
+  background: url('/images/menu_item_inactive.gif');
+}
+
+ul#main_menu li {
+  
+}
+
+ul#main_menu li {
+  color: white;
+}
+
+ul#main_menu li a {
+  display: block;
+  color: white;
+}
+
+ul#main_menu li.active {
+  background: url('/images/menu_item_active.gif');
+}
+
+ul#main_menu li.active a {
+  color: black;
 }
