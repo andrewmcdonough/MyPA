@@ -1,1 +1,1 @@
-APPLICATION_NAME = 'Nudge.org'
+APPLICATION_NAME = 'NudgeMe.org.uk'
