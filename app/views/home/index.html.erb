@@ -1,2 +1,18 @@
-<h2>Welcome to MyPA</h2>
-<p>Get notified!</p>
+<div>
+
+  <div id="whats_nudge">
+    <div id="storyboard">
+      <h3>what's nudge?</h3>
+      <img src="/images/stroyboard_illustration.jpg" width="410" height="235" alt="" />
+    </div>
+  </div>
+  
+  <div id="login_signup">
+    <% if current_user %>
+      <h2>Welcome <%= h current_user.name %>.
+    <% else %>
+      <%= render :partial => 'simple_login' %>
+    <% end %>
+  </div>
+
+</div>

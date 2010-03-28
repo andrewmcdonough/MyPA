@@ -1,0 +1,24 @@
+<h3>login</h3>
+
+<% form_tag session_path do -%>
+
+<p class="clearfix">
+  <%= label_tag 'login', 'username' %>
+  <%= text_field_tag 'login', @login %>
+</p>
+
+<p class="clearfix">
+  <%= label_tag 'password', 'password' %>
+  <%= password_field_tag 'password', nil %>
+</p>
+
+<!-- Uncomment this if you want this functionality
+<p><%= label_tag 'remember_me', 'Remember me' %>
+<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+-->
+
+<p class="clearfix">
+  <%= submit_tag 'Log in' %>
+</p>
+<% end -%>
+<p>don't have an account yet? <%= link_to 'sign up here', signup_path %>.
