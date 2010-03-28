@@ -23,9 +23,9 @@ class UsersController < ApplicationController
       @user.first_name = params[:user][:first_name]
       @user.last_name = params[:user][:last_name]
       redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      flash[:notice] = "Thanks for signing up!"
     else
-      flash[:error]  = "We couldn't set up that account, sorry. Please try again, or contact an admin (link is above)."
+      flash[:error]  = "We couldn't set up that account, sorry. Please try again."
       render :action => 'new'
     end
   end
